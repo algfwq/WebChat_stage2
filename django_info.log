@@ -1843,3 +1843,163 @@ INFO 2023-08-09 09:43:48,701 runserver WebSocket HANDSHAKING /login_ws/ [127.0.0
 INFO 2023-08-09 09:43:48,833 runserver WebSocket CONNECT /login_ws/ [127.0.0.1:54334]
 INFO 2023-08-09 09:43:48,856 runserver HTTP GET /logo/ 200 [0.03, 127.0.0.1:54326]
 INFO 2023-08-09 09:44:12,367 runserver WebSocket DISCONNECT /login_ws/ [127.0.0.1:54334]
+INFO 2023-08-09 16:39:39,597 autoreload Watching for file changes with StatReloader
+INFO 2023-08-09 16:39:46,248 runserver HTTP GET /logo/ 200 [0.06, 127.0.0.1:52607]
+INFO 2023-08-10 14:48:31,993 autoreload Watching for file changes with StatReloader
+WARNING 2023-08-10 14:48:34,798 log Not Found: /
+WARNING 2023-08-10 14:48:34,799 runserver HTTP GET / 404 [0.03, 127.0.0.1:49923]
+WARNING 2023-08-10 14:48:34,938 log Not Found: /favicon.ico
+WARNING 2023-08-10 14:48:34,939 runserver HTTP GET /favicon.ico 404 [0.01, 127.0.0.1:49923]
+INFO 2023-08-10 14:48:43,618 runserver HTTP GET /login/ 200 [0.01, 127.0.0.1:49923]
+INFO 2023-08-10 14:48:43,751 runserver HTTP GET /static/login/index-b9f1492e.css 200 [0.09, 127.0.0.1:49923]
+INFO 2023-08-10 14:48:43,751 runserver HTTP GET /static/login/index-6d03808c.js 200 [0.09, 127.0.0.1:49924]
+INFO 2023-08-10 14:48:43,764 runserver HTTP GET /static/login/background-cdf55e3f.jpg 200 [0.00, 127.0.0.1:49924]
+INFO 2023-08-10 14:48:43,820 runserver WebSocket HANDSHAKING /login_ws/ [127.0.0.1:49929]
+INFO 2023-08-10 14:48:43,879 runserver WebSocket CONNECT /login_ws/ [127.0.0.1:49929]
+INFO 2023-08-10 14:48:43,889 runserver HTTP GET /logo/ 200 [0.01, 127.0.0.1:49924]
+INFO 2023-08-10 14:48:46,262 runserver WebSocket DISCONNECT /login_ws/ [127.0.0.1:49929]
+INFO 2023-08-10 14:49:49,454 runserver HTTP GET /login/ 200 [0.01, 127.0.0.1:50086]
+INFO 2023-08-10 14:49:49,527 runserver WebSocket HANDSHAKING /login_ws/ [127.0.0.1:50088]
+INFO 2023-08-10 14:49:49,528 runserver WebSocket CONNECT /login_ws/ [127.0.0.1:50088]
+INFO 2023-08-10 14:49:49,552 runserver HTTP GET /logo/ 200 [0.01, 127.0.0.1:50086]
+INFO 2023-08-10 14:49:51,891 runserver WebSocket DISCONNECT /login_ws/ [127.0.0.1:50088]
+INFO 2023-08-10 14:50:03,720 autoreload Watching for file changes with StatReloader
+INFO 2023-08-10 14:50:07,679 runserver HTTP GET /login/ 200 [0.01, 127.0.0.1:50133]
+INFO 2023-08-10 14:50:07,736 runserver WebSocket HANDSHAKING /login_ws/ [127.0.0.1:50135]
+INFO 2023-08-10 14:50:07,804 runserver WebSocket CONNECT /login_ws/ [127.0.0.1:50135]
+INFO 2023-08-10 14:50:07,849 runserver HTTP GET /logo/ 200 [0.05, 127.0.0.1:50133]
+INFO 2023-08-10 14:50:10,873 runserver WebSocket DISCONNECT /login_ws/ [127.0.0.1:50135]
+INFO 2023-08-10 14:51:06,437 autoreload Watching for file changes with StatReloader
+INFO 2023-08-10 14:51:08,417 runserver HTTP GET /login/ 200 [0.01, 127.0.0.1:50199]
+INFO 2023-08-10 14:51:08,490 runserver WebSocket HANDSHAKING /login_ws/ [127.0.0.1:50202]
+INFO 2023-08-10 14:51:08,545 runserver WebSocket CONNECT /login_ws/ [127.0.0.1:50202]
+INFO 2023-08-10 14:51:08,587 runserver HTTP GET /logo/ 200 [0.04, 127.0.0.1:50199]
+INFO 2023-08-10 14:51:55,776 runserver HTTP GET /login/ 200 [0.00, 127.0.0.1:50199]
+INFO 2023-08-10 14:51:55,781 runserver WebSocket DISCONNECT /login_ws/ [127.0.0.1:50202]
+INFO 2023-08-10 14:51:55,847 runserver WebSocket HANDSHAKING /login_ws/ [127.0.0.1:50211]
+INFO 2023-08-10 14:51:55,848 runserver WebSocket CONNECT /login_ws/ [127.0.0.1:50211]
+INFO 2023-08-10 14:51:55,870 runserver HTTP GET /logo/ 200 [0.01, 127.0.0.1:50199]
+INFO 2023-08-10 14:56:49,933 autoreload Watching for file changes with StatReloader
+INFO 2023-08-10 14:56:52,808 runserver HTTP GET /login/ 200 [0.01, 127.0.0.1:50544]
+INFO 2023-08-10 14:56:52,931 runserver WebSocket HANDSHAKING /login_ws/ [127.0.0.1:50549]
+INFO 2023-08-10 14:56:52,991 runserver WebSocket CONNECT /login_ws/ [127.0.0.1:50549]
+INFO 2023-08-10 14:56:53,037 runserver HTTP GET /logo/ 200 [0.05, 127.0.0.1:50544]
+INFO 2023-08-10 15:09:19,243 autoreload Watching for file changes with StatReloader
+INFO 2023-08-10 15:10:11,210 runserver HTTP GET /login/ 200 [0.01, 127.0.0.1:50766]
+INFO 2023-08-10 15:10:11,330 runserver WebSocket HANDSHAKING /login_ws/ [127.0.0.1:50776]
+INFO 2023-08-10 15:10:11,389 runserver WebSocket CONNECT /login_ws/ [127.0.0.1:50776]
+INFO 2023-08-10 15:10:11,433 runserver HTTP GET /logo/ 200 [0.05, 127.0.0.1:50766]
+INFO 2023-08-10 15:15:02,522 autoreload D:\OMS\app\tasks.py changed, reloading.
+INFO 2023-08-10 15:15:03,216 autoreload Watching for file changes with StatReloader
+INFO 2023-08-10 15:15:53,568 autoreload D:\OMS\app\tasks.py changed, reloading.
+INFO 2023-08-10 15:15:54,215 autoreload Watching for file changes with StatReloader
+INFO 2023-08-10 15:16:19,579 autoreload D:\OMS\app\tasks.py changed, reloading.
+INFO 2023-08-10 15:16:20,266 autoreload Watching for file changes with StatReloader
+INFO 2023-08-10 15:17:16,173 autoreload Watching for file changes with StatReloader
+INFO 2023-08-10 15:17:22,572 runserver HTTP GET /login/ 200 [0.01, 127.0.0.1:51326]
+INFO 2023-08-10 15:17:22,640 runserver WebSocket HANDSHAKING /login_ws/ [127.0.0.1:51335]
+INFO 2023-08-10 15:17:22,685 runserver WebSocket CONNECT /login_ws/ [127.0.0.1:51335]
+INFO 2023-08-10 15:17:22,732 runserver HTTP GET /logo/ 200 [0.05, 127.0.0.1:51326]
+INFO 2023-08-10 15:18:50,031 autoreload Watching for file changes with StatReloader
+INFO 2023-08-10 15:18:53,560 runserver HTTP GET /login/ 200 [0.01, 127.0.0.1:51371]
+INFO 2023-08-10 15:18:53,623 runserver WebSocket HANDSHAKING /login_ws/ [127.0.0.1:51376]
+INFO 2023-08-10 15:18:53,687 runserver WebSocket CONNECT /login_ws/ [127.0.0.1:51376]
+INFO 2023-08-10 15:18:53,738 runserver HTTP GET /logo/ 200 [0.05, 127.0.0.1:51371]
+WARNING 2023-08-10 15:19:00,207 log Not Found: /chat/
+WARNING 2023-08-10 15:19:00,207 runserver HTTP GET /chat/ 404 [0.01, 127.0.0.1:51371]
+INFO 2023-08-10 15:19:00,213 runserver WebSocket DISCONNECT /login_ws/ [127.0.0.1:51376]
+INFO 2023-08-10 15:19:39,253 autoreload Watching for file changes with StatReloader
+INFO 2023-08-10 15:19:48,672 runserver HTTP GET /login/ 200 [0.01, 127.0.0.1:51407]
+INFO 2023-08-10 15:19:48,745 runserver WebSocket HANDSHAKING /login_ws/ [127.0.0.1:51409]
+INFO 2023-08-10 15:19:48,806 runserver WebSocket CONNECT /login_ws/ [127.0.0.1:51409]
+WARNING 2023-08-10 15:19:59,328 log Not Found: /chat/
+WARNING 2023-08-10 15:19:59,329 runserver HTTP GET /chat/ 404 [0.01, 127.0.0.1:51407]
+INFO 2023-08-10 15:19:59,338 runserver WebSocket DISCONNECT /login_ws/ [127.0.0.1:51409]
+INFO 2023-08-10 15:22:40,343 autoreload Watching for file changes with StatReloader
+INFO 2023-08-10 15:23:17,366 autoreload Watching for file changes with StatReloader
+INFO 2023-08-10 15:23:28,528 runserver HTTP GET /login/ 200 [0.01, 127.0.0.1:51532]
+INFO 2023-08-10 15:23:28,638 runserver WebSocket HANDSHAKING /login_ws/ [127.0.0.1:51537]
+INFO 2023-08-10 15:23:28,698 runserver WebSocket CONNECT /login_ws/ [127.0.0.1:51537]
+WARNING 2023-08-10 15:23:42,199 log Not Found: /chat/
+WARNING 2023-08-10 15:23:42,199 runserver HTTP GET /chat/ 404 [0.01, 127.0.0.1:51532]
+INFO 2023-08-10 15:23:42,207 runserver WebSocket DISCONNECT /login_ws/ [127.0.0.1:51537]
+INFO 2023-08-10 15:30:06,638 autoreload Watching for file changes with StatReloader
+INFO 2023-08-10 15:30:36,571 runserver HTTP GET /user_image/ALGK/ 200 [0.05, 127.0.0.1:51718]
+INFO 2023-08-10 15:31:16,459 autoreload Watching for file changes with StatReloader
+WARNING 2023-08-10 15:31:19,048 log Not Found: /
+WARNING 2023-08-10 15:31:19,048 runserver HTTP GET / 404 [0.02, 127.0.0.1:51939]
+WARNING 2023-08-10 15:31:19,210 log Not Found: /favicon.ico
+WARNING 2023-08-10 15:31:19,211 runserver HTTP GET /favicon.ico 404 [0.01, 127.0.0.1:51939]
+INFO 2023-08-10 15:31:45,683 runserver HTTP GET /user_image/ALGK/ 200 [0.05, 127.0.0.1:51939]
+ERROR 2023-08-10 15:32:05,191 log Internal Server Error: /user_image/alg/
+Traceback (most recent call last):
+  File "D:\OMS\venv\lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "D:\OMS\venv\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "D:\OMS\venv\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "D:\OMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\OMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "D:\OMS\app\views.py", line 15, in user_image_down
+    file = open(os.path.abspath(os.path.dirname(current_path) + os.path.sep + ".") + '/user_image/' + username + '.png', 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\OMS\\app/user_image/alg.png'
+ERROR 2023-08-10 15:32:05,195 runserver HTTP GET /user_image/alg/ 500 [0.03, 127.0.0.1:51939]
+INFO 2023-08-10 15:32:35,717 autoreload Watching for file changes with StatReloader
+WARNING 2023-08-10 15:32:39,949 log Not Found: /
+WARNING 2023-08-10 15:32:39,950 runserver HTTP GET / 404 [0.01, 127.0.0.1:52092]
+WARNING 2023-08-10 15:32:40,137 log Not Found: /favicon.ico
+WARNING 2023-08-10 15:32:40,137 runserver HTTP GET /favicon.ico 404 [0.01, 127.0.0.1:52092]
+INFO 2023-08-10 15:32:47,336 runserver HTTP GET /login/ 200 [0.00, 127.0.0.1:52092]
+INFO 2023-08-10 15:32:47,399 runserver WebSocket HANDSHAKING /login_ws/ [127.0.0.1:52100]
+INFO 2023-08-10 15:32:47,428 runserver WebSocket CONNECT /login_ws/ [127.0.0.1:52100]
+WARNING 2023-08-10 15:32:54,332 log Not Found: /chat/
+WARNING 2023-08-10 15:32:54,332 runserver HTTP GET /chat/ 404 [0.01, 127.0.0.1:52092]
+INFO 2023-08-10 15:32:54,342 runserver WebSocket DISCONNECT /login_ws/ [127.0.0.1:52100]
+INFO 2023-08-10 15:38:26,782 autoreload Watching for file changes with StatReloader
+WARNING 2023-08-10 15:38:29,008 log Not Found: /
+WARNING 2023-08-10 15:38:29,009 runserver HTTP GET / 404 [0.02, 127.0.0.1:52694]
+WARNING 2023-08-10 15:38:29,169 log Not Found: /favicon.ico
+WARNING 2023-08-10 15:38:29,169 runserver HTTP GET /favicon.ico 404 [0.01, 127.0.0.1:52694]
+INFO 2023-08-10 15:38:41,779 runserver HTTP GET /login/ 200 [0.01, 127.0.0.1:52694]
+INFO 2023-08-10 15:38:41,842 runserver WebSocket HANDSHAKING /login_ws/ [127.0.0.1:52709]
+INFO 2023-08-10 15:38:41,868 runserver WebSocket CONNECT /login_ws/ [127.0.0.1:52709]
+WARNING 2023-08-10 15:38:53,277 log Not Found: /chat/
+WARNING 2023-08-10 15:38:53,278 runserver HTTP GET /chat/ 404 [0.01, 127.0.0.1:52694]
+INFO 2023-08-10 15:38:53,285 runserver WebSocket DISCONNECT /login_ws/ [127.0.0.1:52709]
+INFO 2023-08-10 15:40:29,985 autoreload Watching for file changes with StatReloader
+INFO 2023-08-10 15:40:44,123 runserver HTTP GET /login/ 200 [0.01, 127.0.0.1:52783]
+INFO 2023-08-10 15:40:44,215 runserver WebSocket HANDSHAKING /login_ws/ [127.0.0.1:52786]
+INFO 2023-08-10 15:40:44,286 runserver WebSocket CONNECT /login_ws/ [127.0.0.1:52786]
+WARNING 2023-08-10 15:41:13,437 log Not Found: /chat/
+WARNING 2023-08-10 15:41:13,438 runserver HTTP GET /chat/ 404 [0.01, 127.0.0.1:52783]
+INFO 2023-08-10 15:41:13,446 runserver WebSocket DISCONNECT /login_ws/ [127.0.0.1:52786]
+INFO 2023-08-10 15:41:34,332 autoreload Watching for file changes with StatReloader
+INFO 2023-08-10 15:41:43,127 runserver HTTP GET /login/ 200 [0.01, 127.0.0.1:52824]
+INFO 2023-08-10 15:41:43,203 runserver WebSocket HANDSHAKING /login_ws/ [127.0.0.1:52826]
+INFO 2023-08-10 15:41:43,262 runserver WebSocket CONNECT /login_ws/ [127.0.0.1:52826]
+WARNING 2023-08-10 15:41:57,306 log Not Found: /chat/
+WARNING 2023-08-10 15:41:57,307 runserver HTTP GET /chat/ 404 [0.01, 127.0.0.1:52824]
+INFO 2023-08-10 15:41:57,315 runserver WebSocket DISCONNECT /login_ws/ [127.0.0.1:52826]
+INFO 2023-08-10 16:51:23,838 autoreload Watching for file changes with StatReloader
+WARNING 2023-08-10 16:51:27,211 log Not Found: /
+WARNING 2023-08-10 16:51:27,211 runserver HTTP GET / 404 [0.02, 127.0.0.1:64484]
+WARNING 2023-08-10 16:51:27,396 log Not Found: /favicon.ico
+WARNING 2023-08-10 16:51:27,397 runserver HTTP GET /favicon.ico 404 [0.03, 127.0.0.1:64484]
+INFO 2023-08-10 16:51:32,755 runserver HTTP GET /login/ 200 [0.01, 127.0.0.1:64484]
+INFO 2023-08-10 16:51:32,823 runserver WebSocket HANDSHAKING /login_ws/ [127.0.0.1:64495]
+INFO 2023-08-10 16:51:32,851 runserver WebSocket CONNECT /login_ws/ [127.0.0.1:64495]
+INFO 2023-08-10 16:52:14,284 runserver WebSocket DISCONNECT /login_ws/ [127.0.0.1:64495]
+WARNING 2023-08-10 16:52:19,350 log Not Found: /
+WARNING 2023-08-10 16:52:19,350 runserver HTTP GET / 404 [0.01, 127.0.0.1:64520]
+WARNING 2023-08-10 16:52:19,508 log Not Found: /favicon.ico
+WARNING 2023-08-10 16:52:19,509 runserver HTTP GET /favicon.ico 404 [0.01, 127.0.0.1:64520]
+INFO 2023-08-10 16:52:26,497 runserver HTTP GET /login/ 200 [0.00, 127.0.0.1:64520]
+INFO 2023-08-10 16:52:26,558 runserver WebSocket HANDSHAKING /login_ws/ [127.0.0.1:64525]
+INFO 2023-08-10 16:52:26,559 runserver WebSocket CONNECT /login_ws/ [127.0.0.1:64525]
+INFO 2023-08-10 16:52:45,774 runserver WebSocket DISCONNECT /login_ws/ [127.0.0.1:64525]
+INFO 2023-08-10 16:53:00,032 autoreload Watching for file changes with StatReloader

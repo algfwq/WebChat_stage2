@@ -2,7 +2,7 @@ import os
 from celery import Celery
 
 # eventlet非常重要，Windows特有
-# celery -A OMS worker -l DEBUG -P eventlet
+# celery -A OMS worker -l INFO -P eventlet
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'OMS.settings')  # 设置django环境
 

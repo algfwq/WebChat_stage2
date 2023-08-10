@@ -4,13 +4,15 @@ from app.models import Settings, User
 from asgiref.sync import async_to_sync
 from django.conf import settings
 from django.core.cache import cache  # 引入缓存模块
-from.tasks import send_code
+from .tasks import send_code, create_image
 import random
 import json
 
 # 配置日志记录器
 import logging
+
 logger = logging.getLogger('django')
+
 
 class login(WebsocketConsumer):
     def websocket_connect(self, message):
@@ -51,20 +53,20 @@ class login(WebsocketConsumer):
                 code) + "。有效期30分钟。如果这不是你本人操作，您的邮箱账号很可能已经泄漏，并且被他人用于非法目的。"
             recipient_list = []
             recipient_list.append(email)
-            #执行异步发送邮件
-            #设置群组
+            # 执行异步发送邮件
+            # 设置群组
             async_to_sync(self.channel_layer.group_add)(
                 str(code),  # 组名称
                 self.channel_name  # 客户端名称
             )
-            #调用异步任务
-            send_code.delay(str(code),email_message,recipient_list)
+            # 调用异步任务
+            send_code.delay(str(code), email_message, recipient_list)
 
         # 如果为注册账号请求
         elif text['mode'] == 'register':
-            #判断设置，是否支持邮箱
+            # 判断设置，是否支持邮箱
             if Settings.objects.get(id=1).email_ture == 'F':
-                #接收参数
+                # 接收参数
                 name = text['name']
                 password = text['password']
 
@@ -73,7 +75,8 @@ class login(WebsocketConsumer):
                     self.send(json.dumps({'mode': 'register_name_too_long', 'message': '名称长度不能超过15个字符！'}))
 
                 elif len(password) > 30:
-                    self.send(json.dumps({'mode': 'register_password_too_long', 'message': '密码长度不能超过30个字符！'}))
+                    self.send(
+                        json.dumps({'mode': 'register_password_too_long', 'message': '密码长度不能超过30个字符！'}))
 
                 else:
                     # 保存用户信息到数据库中
@@ -84,6 +87,7 @@ class login(WebsocketConsumer):
                             self.send(json.dumps({'mode': 'register_username_repeat', 'message': '用户名重复！'}))
                         except:
                             User.objects.create(username=name, password=password)
+                            create_image.delay(name, name)
                             self.send(json.dumps({'mode': 'register_success',
                                                   'message': '注册成功！',
                                                   'url': '/chat/'}))
@@ -119,7 +123,8 @@ class login(WebsocketConsumer):
                     self.send(json.dumps({'mode': 'register_name_too_long', 'message': '名称长度不能超过15个字符！'}))
 
                 elif len(password) > 30:
-                    self.send(json.dumps({'mode': 'register_password_too_long', 'message': '密码长度不能超过30个字符！'}))
+                    self.send(
+                        json.dumps({'mode': 'register_password_too_long', 'message': '密码长度不能超过30个字符！'}))
 
                 elif len(email) > 100:
                     self.send(json.dumps({'mode': 'register_email_too_long', 'message': '邮箱长度不能超过100个字符！'}))
@@ -141,9 +146,10 @@ class login(WebsocketConsumer):
                         except:
                             try:
                                 User.objects.get(email=email)
-                                self.send(json.dumps({'mode':'register_username_repeat','message': '邮箱重复！'}))
+                                self.send(json.dumps({'mode': 'register_username_repeat', 'message': '邮箱重复！'}))
                             except:
                                 User.objects.create(username=name, password=password, email=email)
+                                create_image.delay(name, name)
                                 self.send(json.dumps({'mode': 'register_success',
                                                       'message': '注册成功！',
                                                       'url': '/chat/'}))
@@ -183,3 +189,98 @@ class login(WebsocketConsumer):
 
     def email_code(self, event):
         self.send(json.dumps(event))
+
+
+class main(WebsocketConsumer):
+    def websocket_connect(self, message):
+        # 允许连接，并且关闭骨架屏，传输网站名称
+        self.accept()
+        self.send(json.dumps({'mode': 'load',
+                              'web_name': Settings.objects.get(id=1).web_name}))
+
+    def websocket_receive(self, message):
+        # 输出消息
+        print(message['text'])
+        text = dict(eval(message['text']))
+
+        if text['mode'] == 'login':
+            # 获取参数
+            username = text['username']
+            password = text['password']
+
+            # 判断用户是否真实
+            try:
+                User.objects.get(username=username, password=password)
+            except:
+                self.send(json.dumps({'mode': 'login_error'}))
+                return
+
+            # 返回用户数据
+            self.send(json.dumps({'mode':'login_success',
+                                  'user_id': User.objects.get(username=username).id,
+                                  'username': User.objects.get(username=username).username,
+                                  'email':User.objects.get(username=username).email,
+                                  'super':User.objects.get(username=username).super,
+                                  'robot':User.objects.get(username=username).robot,
+                                  'sign':User.objects.get(username=username).sign}))
+
+        elif text['mode'] == 'cancel':
+            #获取参数
+            username = text['username']
+            password = text['password']
+
+            #验证是否为本人
+            try:
+                User.objects.get(username=username,password=password)
+            except:
+                self.send(json.dumps({'mode':'cancel_fail'}))
+                return
+
+            #删除账号
+            User.objects.get(username=username,password=password).delete()
+            self.send(json.dumps({'mode':'cancel','message':'账号已经成功注销！再见啦！'}))
+
+        elif text['mode'] == 'change':
+            # 获取参数
+            old_username = text['old_username']
+            old_password = text['old_password']
+
+            # 验证是否为本人
+            try:
+                User.objects.get(username=old_username, password=old_password)
+            except:
+                self.send(json.dumps({'mode': 'change_fail'}))
+                return
+
+            # 获取需要更改的数据
+            username = text['username']
+            password = text['password']
+            email = text['email']
+            robot = text['robot']
+            sign = text['sign']
+
+            #验证数据
+            if len(username) > 15:
+                self.send(json.dumps({'mode':'error','msg':'用户名过长，请控制用户名在15个字符以内！'}))
+            elif len(password) > 30:
+                self.send(json.dumps({'mode':'error','msg':'密码过长，请控制密码在30个字符以内！'}))
+            elif len(email) > 100:
+                self.send(json.dumps({'mode':'error','msg':'邮箱过长，请控制邮箱在100个字符以内！'}))
+            elif robot != 'T' and robot != 'F':
+                self.send(json.dumps({'mode':'error','msg':'？？？我操你妈！'}))
+            elif len(sign) > 100:
+                self.send(json.dumps({'mode':'error','msg':'个性签名过长，请控制个性签名在100个字符以内！'}))
+            else:
+                #更改数据
+                user = User.objects.get(username=username,password=password)
+                user.username = username
+                user.password = password
+                user.email = email
+                user.robot = robot
+                user.sign = sign
+                user.save()
+
+
+    def websocket_disconnect(self, message):
+        print('断开连接')
+        raise StopConsumer()
